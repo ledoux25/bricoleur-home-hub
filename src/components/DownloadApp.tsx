@@ -55,9 +55,10 @@ const DownloadApp = () => {
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-white/10 rounded-b-xl"></div>
               <div className="w-full h-full bg-bricoleur-primary/30 rounded-[30px] overflow-hidden flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/77863ca3-bb2c-402f-a0d2-2caf0929d198.png"
+                  src="/lovable-uploads/c8cbccb1-1c0b-47df-84ca-9d3acc446a40.png"
                   alt="App mockup"
                   className="object-contain max-h-[92%] max-w-full mx-auto rounded-3xl"
+                  style={{ background: "white" }}
                 />
               </div>
             </div>
@@ -69,3 +70,4 @@ const DownloadApp = () => {
 };
 
 export default DownloadApp;
+
