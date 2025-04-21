@@ -53,19 +53,12 @@ const DownloadApp = () => {
           <div className="flex justify-center">
             <div className="relative w-64 h-[500px] bg-gradient-to-b from-white/10 to-white/5 rounded-[40px] border-4 border-white/20 p-3 shadow-2xl">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-white/10 rounded-b-xl"></div>
-              <div className="w-full h-full bg-bricoleur-primary/30 rounded-[30px] overflow-hidden">
-                <div className="h-full w-full flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
-                      <img 
-                        src="/lovable-uploads/78361499-7955-49d6-94ce-ad099b91929e.png" 
-                        alt="Le Bricoleur Logo" 
-                        className="h-10 w-auto"
-                      />
-                    </div>
-                    <p className="text-white/70 text-sm">App interface visualization</p>
-                  </div>
-                </div>
+              <div className="w-full h-full bg-bricoleur-primary/30 rounded-[30px] overflow-hidden flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/77863ca3-bb2c-402f-a0d2-2caf0929d198.png"
+                  alt="App mockup"
+                  className="object-contain max-h-[92%] max-w-full mx-auto rounded-3xl"
+                />
               </div>
             </div>
           </div>

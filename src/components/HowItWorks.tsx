@@ -1,10 +1,11 @@
 
 import { Search, MapPin, Map, User, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LocationMap from "./LocationMap";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
-  
+
   const steps = [
     {
       icon: <Search className="h-8 w-8 text-white" />,
@@ -40,17 +41,17 @@ const HowItWorks = () => {
         <p className="section-subtitle">
           {t('howItWorks.subtitle')}
         </p>
-        
+
         <div className="mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative">
             {/* Connecting line */}
             <div className="hidden lg:block absolute top-16 left-[10%] right-[10%] h-0.5 bg-bricoleur-primary/20"></div>
-            
+
             {steps.map((step, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="flex flex-col items-center text-center space-y-4 opacity-0 animate-fade-in"
-                style={{ 
+                style={{
                   animationDelay: `${index * 0.15}s`,
                   animationFillMode: 'forwards',
                 }}
@@ -69,17 +70,17 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
-        
-        <div className="mt-24 bg-bricoleur-light rounded-2xl p-8 md:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="space-y-6">
+
+        <div className="mt-12 bg-bricoleur-light rounded-xl p-2 md:p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div className="space-y-4 md:pr-2">
               <h3 className="text-2xl md:text-3xl font-bold text-bricoleur-primary">
                 {t('howItWorks.mapTitle')}
               </h3>
               <p className="text-lg text-gray-700">
                 {t('howItWorks.mapText')}
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-2 text-base">
                 {[
                   'Verified profiles with reviews', 
                   'Live availability status', 
@@ -95,17 +96,7 @@ const HowItWorks = () => {
                 ))}
               </ul>
             </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="aspect-square w-full bg-gray-100 rounded-lg flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
-                    <Map className="h-8 w-8 text-bricoleur-primary" />
-                  </div>
-                  <p className="text-gray-500">Interactive map visualization</p>
-                </div>
-              </div>
-            </div>
+            <LocationMap />
           </div>
         </div>
       </div>
