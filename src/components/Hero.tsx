@@ -1,7 +1,8 @@
+
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import Map from "./Map";
+// Removed Map import
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -51,8 +52,12 @@ const Hero = () => {
           <div className="relative animate-fade-in-right">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-bricoleur-primary/10 rounded-full filter blur-3xl"></div>
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-bricoleur-primary/20 rounded-full filter blur-3xl"></div>
+            {/* Map removed here */}
             <div className="relative z-10 bg-white p-6 rounded-2xl shadow-xl">
-              <Map />
+              {/* You may add an illustration or leave empty */}
+              <div className="aspect-video w-full rounded-xl bg-gray-100 flex items-center justify-center">
+                {/* Optional: placeholder illustration */}
+              </div>
               <div className="absolute inset-x-0 -bottom-8 flex justify-center pointer-events-none">
                 {/* Subtle map shadow or decoration could go here */}
               </div>

@@ -97,14 +97,20 @@ const HowItWorks = () => {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="aspect-square w-full bg-gray-100 rounded-lg flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
-                    <Map className="h-8 w-8 text-bricoleur-primary" />
-                  </div>
-                  <p className="text-gray-500">Interactive map visualization</p>
-                </div>
+              {/* Added OpenStreetMap embed here */}
+              <div className="aspect-video w-full rounded-lg overflow-hidden border bg-gray-100">
+                <iframe
+                  title="Technician Map"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=25%2C10%2C40%2C20&amp;layer=mapnik"
+                  style={{ border: 0, width: '100%', height: '320px' }}
+                  className="w-full h-[320px] rounded-lg"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
               </div>
+              <p className="text-xs text-center text-gray-400 mt-2">
+                Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank" className="underline">OpenStreetMap contributors</a>
+              </p>
             </div>
           </div>
         </div>
