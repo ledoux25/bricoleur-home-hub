@@ -1,6 +1,6 @@
-
 import { Search, MapPin, Map, User, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import OpenStreetMapDouala from "./OpenStreetMapDouala";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
@@ -69,44 +69,9 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
-        
-        <div className="mt-24 bg-bricoleur-light rounded-2xl p-8 md:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="space-y-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-bricoleur-primary">
-                {t('howItWorks.mapTitle')}
-              </h3>
-              <p className="text-lg text-gray-700">
-                {t('howItWorks.mapText')}
-              </p>
-              <ul className="space-y-3">
-                {[
-                  'Verified profiles with reviews', 
-                  'Live availability status', 
-                  'Upfront pricing', 
-                  'Direct messaging'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <div className="h-5 w-5 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
-                      <div className="h-2.5 w-2.5 rounded-full bg-bricoleur-primary"></div>
-                    </div>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="aspect-square w-full bg-gray-100 rounded-lg flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
-                    <Map className="h-8 w-8 text-bricoleur-primary" />
-                  </div>
-                  <p className="text-gray-500">Interactive map visualization</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* >>> MAP SECTION - minimal padding, only essential elements <<< */}
+        <div className="mt-12">
+          <OpenStreetMapDouala />
         </div>
       </div>
     </section>
