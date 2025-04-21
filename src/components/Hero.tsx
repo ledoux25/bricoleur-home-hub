@@ -1,6 +1,8 @@
+
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+// Removed Map import
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -50,41 +52,14 @@ const Hero = () => {
           <div className="relative animate-fade-in-right">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-bricoleur-primary/10 rounded-full filter blur-3xl"></div>
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-bricoleur-primary/20 rounded-full filter blur-3xl"></div>
-            
+            {/* Map removed here */}
             <div className="relative z-10 bg-white p-6 rounded-2xl shadow-xl">
-              <div className="w-full h-[400px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 bg-bricoleur-gray flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-bricoleur-primary flex items-center justify-center text-white font-bold">
-                          Map
-                        </div>
-                      </div>
-                      <p className="text-gray-500">Interactive map showing nearby technicians</p>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute bottom-0 left-0 right-0 bg-white p-4 rounded-t-xl shadow-lg">
-                    <h3 className="font-medium mb-2">Available Technicians Near You</h3>
-                    <div className="space-y-3">
-                      {[1, 2, 3].map((item) => (
-                        <div key={item} className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50">
-                          <div className="w-10 h-10 rounded-full bg-bricoleur-primary/30"></div>
-                          <div>
-                            <p className="font-medium">Technician #{item}</p>
-                            <p className="text-sm text-gray-500">1.{item} km away • Available now</p>
-                          </div>
-                          <div className="ml-auto">
-                            <span className="text-sm font-medium bg-green-100 text-green-800 py-1 px-2 rounded-full">
-                              4.{8 + item}/5
-                            </span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+              {/* You may add an illustration or leave empty */}
+              <div className="aspect-video w-full rounded-xl bg-gray-100 flex items-center justify-center">
+                {/* Optional: placeholder illustration */}
+              </div>
+              <div className="absolute inset-x-0 -bottom-8 flex justify-center pointer-events-none">
+                {/* Subtle map shadow or decoration could go here */}
               </div>
             </div>
           </div>

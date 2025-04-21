@@ -1,6 +1,6 @@
+
 import { Search, MapPin, Map, User, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import OpenStreetMapDouala from "./OpenStreetMapDouala";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
@@ -69,9 +69,50 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
-        {/* >>> MAP SECTION - minimal padding, only essential elements <<< */}
-        <div className="mt-12">
-          <OpenStreetMapDouala />
+        
+        <div className="mt-24 bg-bricoleur-light rounded-2xl p-8 md:p-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="space-y-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-bricoleur-primary">
+                {t('howItWorks.mapTitle')}
+              </h3>
+              <p className="text-lg text-gray-700">
+                {t('howItWorks.mapText')}
+              </p>
+              <ul className="space-y-3">
+                {[
+                  'Verified profiles with reviews', 
+                  'Live availability status', 
+                  'Upfront pricing', 
+                  'Direct messaging'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="h-5 w-5 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
+                      <div className="h-2.5 w-2.5 rounded-full bg-bricoleur-primary"></div>
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              {/* Added OpenStreetMap embed here */}
+              <div className="aspect-video w-full rounded-lg overflow-hidden border bg-gray-100">
+                <iframe
+                  title="Technician Map"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=25%2C10%2C40%2C20&amp;layer=mapnik"
+                  style={{ border: 0, width: '100%', height: '320px' }}
+                  className="w-full h-[320px] rounded-lg"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <p className="text-xs text-center text-gray-400 mt-2">
+                Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank" className="underline">OpenStreetMap contributors</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
