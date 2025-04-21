@@ -65,17 +65,17 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 mt-0.5 text-white/80" />
-                <span className="text-white/80">contact@lebricoleur.com</span>
+                <span className="text-white/80">contact@lebricoleur.cm</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 mt-0.5 text-white/80" />
-                <span className="text-white/80">+33 (0)1 23 45 67 89</span>
+                <span className="text-white/80">+237 6 96 96 10 11</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 mt-0.5 text-white/80" />
                 <span className="text-white/80">
-                  123 Avenue des Champs-Élysées<br />
-                  75008 Paris, France
+                  123 Bonamoussadi, carrefour Etoo<br />
+                  75008 Douala, Cameroon
                 </span>
               </li>
             </ul>
