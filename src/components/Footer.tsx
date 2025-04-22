@@ -87,9 +87,9 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Le Bricoleur. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">
+            <Link to="/terms-of-service" className="text-white/60 hover:text-white text-sm transition-colors">
               Terms of Service
-            </a>
+            </Link>
             <Link to="/privacy-policy" className="text-white/60 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
