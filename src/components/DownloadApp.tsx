@@ -1,10 +1,12 @@
-
 import { Check, Apple, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const DownloadApp = () => {
   return (
-    <section id="download" className="section bg-gradient-to-br from-bricoleur-primary to-bricoleur-secondary text-white">
+    <section
+      id="download"
+      className="section bg-gradient-to-br from-bricoleur-primary to-bricoleur-secondary text-white"
+    >
       <div className="bricoleur-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -12,16 +14,16 @@ const DownloadApp = () => {
               Booking repairs just got easier
             </h2>
             <p className="text-lg opacity-90">
-              Download the Le Bricoleur app to find trusted technicians anywhere, anytime. 
-              Your home repairs are just a few taps away.
+              Download the Le Bricoleur app to find trusted technicians
+              anywhere, anytime. Your home repairs are just a few taps away.
             </p>
-            
+
             <div className="space-y-4">
               {[
                 "Instant booking with real-time availability",
                 "Secure payment and transparent pricing",
                 "Verified reviews from real customers",
-                "Direct messaging with your technician"
+                "Direct messaging with your technician",
               ].map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <div className="h-6 w-6 rounded-full bg-white flex items-center justify-center flex-shrink-0">
@@ -31,41 +33,47 @@ const DownloadApp = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
+              <Button
                 className="bg-white/20 text-white hover:bg-white/30 border border-white/40 transition-all duration-200"
                 size="lg"
               >
                 <Apple className="mr-2 h-5 w-5" />
                 App Store (Coming soon)
               </Button>
-              <a  href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk"
-              download={"lebricolleur.apk"}
+              <a
+                href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk"
+                download={"lebricolleur.apk"}
               >
-                              <Button 
-                className="bg-white w-full text-gray-800 hover:bg-opacity-90 transition-all duration-200"
-                size="lg"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download App
-              </Button>
+                <Button
+                  className="bg-white w-full text-gray-800 hover:bg-opacity-90 transition-all duration-200"
+                  size="lg"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download App
+                </Button>
               </a>
             </div>
           </div>
-          
-          <div className="flex justify-center">
-            <div className="relative w-64 h-[500px] bg-gradient-to-b from-white/10 to-white/5 rounded-[40px] border-4 border-white/20 p-3 shadow-2xl">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-white/10 rounded-b-xl"></div>
-              <div className="w-full h-full bg-bricoleur-primary/30 rounded-[30px] overflow-hidden flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/c8cbccb1-1c0b-47df-84ca-9d3acc446a40.png"
-                  alt="App mockup"
-                  className="object-contain max-h-[92%] max-w-full mx-auto rounded-3xl"
-                  style={{ background: "white" }}
-                />
-              </div>
-            </div>
+
+          <div className="flex md:flex-row flex-col justify-center">
+            <img
+              src="https://res.cloudinary.com/ddqkpyo5u/image/upload/c_crop,ar_9:16/v1745312120/iphone-x-mockup_1_jou6ci.png"
+              alt="App mockup"
+              className="object-contain max-h-[60vh]    rounded-3xl"
+            />
+            <img
+              src="https://res.cloudinary.com/ddqkpyo5u/image/upload/c_crop,ar_9:16/v1745313400/iphone-x-mockup_2_o5xboo.png"
+              alt="App mockup"
+              className="object-contain max-h-[60vh]   rounded-3xl"
+            />
+                        <img
+              src="https://res.cloudinary.com/ddqkpyo5u/image/upload/c_crop,ar_9:16/v1745314564/iphone-x-mockup_3_khquxs.png"
+              alt="App mockup"
+              className="object-contain max-h-[60vh] md:hidden   rounded-3xl"
+            />
+            
           </div>
         </div>
       </div>
@@ -74,4 +82,3 @@ const DownloadApp = () => {
 };
 
 export default DownloadApp;
-

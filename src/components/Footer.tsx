@@ -19,7 +19,7 @@ const Footer = () => {
               Connecting people with trusted, nearby technicians for home repair services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href="https://www.facebook.com/share/194Cwszosa/?mibextid=wwXIfr" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
               <a href="#" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
