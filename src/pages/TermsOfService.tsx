@@ -97,7 +97,7 @@ const TermsOfService = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">7. Litiges et Droit Applicable</h2>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>En cas de conflit, privilégiez le contact amiable via : contact@lebricoleur.cm.</li>
+              <li>En cas de conflit, privilégiez le contact amiable via : contact@lebricoleur.cm</li>
               <li>Si échec, les tribunaux camerounais seront compétents.</li>
             </ul>
           </section>
