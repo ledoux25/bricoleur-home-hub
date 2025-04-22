@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const DownloadApp = () => {
   return (
-    <section className="section bg-gradient-to-br from-bricoleur-primary to-bricoleur-secondary text-white">
+    <section id="download" className="section bg-gradient-to-br from-bricoleur-primary to-bricoleur-secondary text-white">
       <div className="bricoleur-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -34,19 +34,23 @@ const DownloadApp = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
-                className="bg-white text-bricoleur-primary hover:bg-opacity-90 transition-all duration-200"
-                size="lg"
-              >
-                <Apple className="mr-2 h-5 w-5" />
-                App Store
-              </Button>
-              <Button 
                 className="bg-white/20 text-white hover:bg-white/30 border border-white/40 transition-all duration-200"
                 size="lg"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Google Play
+                <Apple className="mr-2 h-5 w-5" />
+                App Store (Coming soon)
               </Button>
+              <a  href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk"
+              download={"lebricolleur.apk"}
+              >
+                              <Button 
+                className="bg-white w-full text-gray-800 hover:bg-opacity-90 transition-all duration-200"
+                size="lg"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download App
+              </Button>
+              </a>
             </div>
           </div>
           

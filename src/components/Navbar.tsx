@@ -1,10 +1,11 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
+
+
 
 const Navbar = () => {
   const { t } = useLanguage();
@@ -31,14 +32,14 @@ const Navbar = () => {
     if (element) {
       window.scrollTo({
         top: element.offsetTop - 80,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
       setIsMobileMenuOpen(false);
     }
   };
 
   return (
-    <header 
+    <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
@@ -47,52 +48,54 @@ const Navbar = () => {
       <div className="bricoleur-container">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/78361499-7955-49d6-94ce-ad099b91929e.png" 
-              alt="Le Bricoleur Logo" 
+            <img
+              src="/lovable-uploads/78361499-7955-49d6-94ce-ad099b91929e.png"
+              alt="Le Bricoleur Logo"
               className="h-10 w-auto"
             />
-            <span className="ml-2 text-xl font-semibold text-bricoleur-primary">Le Bricoleur</span>
+            <span className="ml-2 text-xl font-semibold text-bricoleur-primary">
+              Le Bricoleur
+            </span>
           </div>
-          
+
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
+            <button
+              onClick={() => scrollToSection("home")}
               className="text-gray-800 hover:text-bricoleur-primary font-medium"
             >
-              {t('nav.home')}
+              {t("nav.home")}
             </button>
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
+            <button
+              onClick={() => scrollToSection("how-it-works")}
               className="text-gray-800 hover:text-bricoleur-primary font-medium"
             >
-              {t('nav.howItWorks')}
+              {t("nav.howItWorks")}
             </button>
-            <button 
-              onClick={() => scrollToSection('for-technicians')}
+            <button
+              onClick={() => scrollToSection("for-technicians")}
               className="text-gray-800 hover:text-bricoleur-primary font-medium"
             >
-              {t('nav.forTechnicians')}
+              {t("nav.forTechnicians")}
             </button>
-            <button 
-              onClick={() => scrollToSection('faq')}
+            <button
+              onClick={() => scrollToSection("faq")}
               className="text-gray-800 hover:text-bricoleur-primary font-medium"
             >
-              {t('nav.faq')}
+              {t("nav.faq")}
             </button>
-            <Button 
-              className="bg-bricoleur-primary hover:bg-bricoleur-primary/90 text-white rounded-full"
-            >
-              {t('nav.downloadApp')}
+              <a href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk" download={"lebricolleur.apk"}>
+              <Button className="bg-bricoleur-primary hover:bg-bricoleur-primary/90 text-white rounded-full">
+              {t("nav.downloadApp")}
             </Button>
+              </a>
             <LanguageSwitcher />
           </nav>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <LanguageSwitcher />
-            <button 
+            <button
               className="ml-2 text-gray-800"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -100,40 +103,43 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        
+
         {/* Mobile navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg animate-fade-in">
             <div className="flex flex-col space-y-4 px-4">
-              <button 
-                onClick={() => scrollToSection('home')}
+              <button
+                onClick={() => scrollToSection("home")}
                 className="text-gray-800 hover:text-bricoleur-primary font-medium py-2"
               >
-                {t('nav.home')}
+                {t("nav.home")}
               </button>
-              <button 
-                onClick={() => scrollToSection('how-it-works')}
+              <button
+                onClick={() => scrollToSection("how-it-works")}
                 className="text-gray-800 hover:text-bricoleur-primary font-medium py-2"
               >
-                {t('nav.howItWorks')}
+                {t("nav.howItWorks")}
               </button>
-              <button 
-                onClick={() => scrollToSection('for-technicians')}
+              <button
+                onClick={() => scrollToSection("for-technicians")}
                 className="text-gray-800 hover:text-bricoleur-primary font-medium py-2"
               >
-                {t('nav.forTechnicians')}
+                {t("nav.forTechnicians")}
               </button>
-              <button 
-                onClick={() => scrollToSection('faq')}
+              <button
+                onClick={() => scrollToSection("faq")}
                 className="text-gray-800 hover:text-bricoleur-primary font-medium py-2"
               >
-                {t('nav.faq')}
+                {t("nav.faq")}
               </button>
-              <Button 
-                className="bg-bricoleur-primary hover:bg-bricoleur-primary/90 text-white rounded-full"
+              <a
+                href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk"
+                download="lebricoleur.apk"
               >
-                {t('nav.downloadApp')}
-              </Button>
+                <Button className="bg-bricoleur-primary hover:bg-bricoleur-primary/90 text-white rounded-full">
+                  {t("nav.downloadApp")}
+                </Button>
+              </a>
             </div>
           </div>
         )}

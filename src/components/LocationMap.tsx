@@ -18,7 +18,7 @@ const LocationMap: React.FC = () => (
   <div className="w-full rounded-xl overflow-hidden shadow-md" style={{ minHeight: 220, height: 280, padding: 0 }}>
     <MapContainer
       center={doualaCoords}
-      zoom={13}
+      zoom={30}
       scrollWheelZoom={false}
       style={{ height: "100%", width: "100%" }}
       attributionControl={false}
