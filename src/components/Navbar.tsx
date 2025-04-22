@@ -1,14 +1,15 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
-
-
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const { t } = useLanguage();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -27,15 +28,23 @@ const Navbar = () => {
     };
   }, []);
 
+  const isHomePage = location.pathname === "/";
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: "smooth",
-      });
-      setIsMobileMenuOpen(false);
+    if (isHomePage) {
+      // Only scroll if we're on the home page
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      // Navigate to home page with hash for section
+      window.location.href = `/#${id}`;
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -48,14 +57,16 @@ const Navbar = () => {
       <div className="bricoleur-container">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img
-              src="/lovable-uploads/78361499-7955-49d6-94ce-ad099b91929e.png"
-              alt="Le Bricoleur Logo"
-              className="h-10 w-auto"
-            />
-            <span className="ml-2 text-xl font-semibold text-bricoleur-primary">
+            <Link to="/">
+              <img
+                src="/lovable-uploads/78361499-7955-49d6-94ce-ad099b91929e.png"
+                alt="Le Bricoleur Logo"
+                className="h-10 w-auto"
+              />
+            </Link>
+            <Link to="/" className="ml-2 text-xl font-semibold text-bricoleur-primary">
               Le Bricoleur
-            </span>
+            </Link>
           </div>
 
           {/* Desktop navigation */}
@@ -84,11 +95,11 @@ const Navbar = () => {
             >
               {t("nav.faq")}
             </button>
-              <a href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk" download={"lebricolleur.apk"}>
+            <a href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk" download={"lebricolleur.apk"}>
               <Button className="bg-bricoleur-primary hover:bg-bricoleur-primary/90 text-white rounded-full">
-              {t("nav.downloadApp")}
-            </Button>
-              </a>
+                {t("nav.downloadApp")}
+              </Button>
+            </a>
             <LanguageSwitcher />
           </nav>
 
