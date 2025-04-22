@@ -1,42 +1,44 @@
 import LocationMap from "./LocationMap";
 import { Calendar, MapPin, Rocket, Search, ShieldCheck, User, Users2 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-
+const HowItWorks = () => {
+  const { t } = useLanguage();
+  
   const steps = [
     {
       icon: <Search className="h-8 w-8 text-white" />,
-      title: "Search",
-      description: "Tell us what you need help with in a few simple steps."
+      title: t('howItWorks.search'),
+      description: t('howItWorks.searchDesc')
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
-      title: "Auto-detect location",
-      description: "We'll find your current location or you can enter a different address."
+      title: t('howItWorks.location'),
+      description: t('howItWorks.locationDesc')
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
-      title: "See results on a map",
-      description: "View available technicians near you with live availability."
+      title: t('howItWorks.map'),
+      description: t('howItWorks.mapDesc')
     },
     {
       icon: <User className="h-8 w-8 text-white" />,
-      title: "Compare profiles",
-      description: "Review ratings, specialties, and previous work to find your match."
+      title: t('howItWorks.profiles'),
+      description: t('howItWorks.profilesDesc')
     },
     {
       icon: <Calendar className="h-8 w-8 text-white" />,
-      title: "Book instantly",
-      description: "Schedule now or for a future date, and get confirmation right away."
+      title: t('howItWorks.book'),
+      description: t('howItWorks.bookDesc')
     }
   ];
 
-const HowItWorks = () => {
   return (
     <section id="how-it-works" className="section bg-white">
       <div className="bricoleur-container">
-        <h2 className="section-title">How It Works</h2>
+        <h2 className="section-title">{t('howItWorks.title')}</h2>
         <p className="section-subtitle">
-          Finding and booking a reliable handyman has never been easier
+          {t('howItWorks.subtitle')}
         </p>
         
         <div className="mt-16">
@@ -48,12 +50,11 @@ const HowItWorks = () => {
               <div 
                 key={index} 
                 
+                className="flex flex-col items-center text-center space-y-4 opacity-0 animate-fade-in"
                 style={{ 
                   animationDelay: `${index * 0.15}s`,
                   animationFillMode: 'forwards',
-                  opacity: 0 
                 }}
-                className="flex flex-col items-center text-center space-y-4 opacity-0 animate-fade-in"
               >
                 <div className="relative">
                   <div className="w-20 h-20 rounded-full bg-bricoleur-primary flex items-center justify-center shadow-lg mb-4">
@@ -74,13 +75,18 @@ const HowItWorks = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-bold text-bricoleur-primary">
-                See technicians around you — instantly
+                {t('howItWorks.mapTitle')}
               </h3>
               <p className="text-lg text-gray-700">
-                Our interactive map shows you qualified technicians in your area, with real-time availability and transparent pricing. No more waiting for quotes or playing phone tag.
+                {t('howItWorks.mapText')}
               </p>
               <ul className="space-y-3">
-                {['Verified profiles with reviews', 'Live availability status', 'Upfront pricing', 'Direct messaging'].map((item, index) => (
+                {[
+                  'Verified profiles with reviews', 
+                  'Live availability status', 
+                  'Upfront pricing', 
+                  'Direct messaging'
+                ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <div className="h-5 w-5 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
                       <div className="h-2.5 w-2.5 rounded-full bg-bricoleur-primary"></div>
