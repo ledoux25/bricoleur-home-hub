@@ -56,17 +56,8 @@ const Hero = () => {
             <div className="relative z-10 bg-white p-6 rounded-2xl shadow-xl">
               <div className="w-full h-[400px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden">
                 <div className="relative w-full h-full">
-                  <div className="absolute inset-0 bg-bricoleur-gray flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-bricoleur-primary/20 flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-bricoleur-primary flex items-center justify-center text-white font-bold">
-                          Map
-                        </div>
-                      </div>
-                      <p className="text-gray-500">
-                        Interactive map showing nearby technicians
-                      </p>
-                    </div>
+                  <div className=" bg-bricoleur-gray  translate-y-[-33%] flex items-center justify-center">
+                    <img src="https://res.cloudinary.com/ddqkpyo5u/image/upload/v1745235883/ChatGPT_Image_Apr_21_2025_10_12_31_AM_aafp4m.png" alt="sscs" />
                   </div>
 
                   <div className="absolute bottom-0 left-0 right-0 bg-white p-4 rounded-t-xl shadow-lg">
@@ -94,7 +85,7 @@ const Hero = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div> 
                 </div>
               </div>
             </div>

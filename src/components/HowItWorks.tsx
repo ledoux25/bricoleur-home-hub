@@ -1,6 +1,9 @@
 import LocationMap from "./LocationMap";
 import { Calendar, MapPin, Rocket, Search, ShieldCheck, User, Users2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
 
 const HowItWorks = () => {
   const { t } = useLanguage();
