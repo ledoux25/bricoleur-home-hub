@@ -7,7 +7,7 @@ export interface Technician {
   jobsCompleted: number;
   location: string;
   distance: number;
-  price: number;
+  price: number; // Price per hour in FCFA
   specialties: string[];
   description: string;
   images: string[];
