@@ -1,15 +1,14 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Layout from "@/components/Layout";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main className="py-20 px-4">
-        <div className="bricoleur-container max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Conditions Générales d'Utilisation – Le Bricoleur</h1>
+    <Layout>
+      <div className="bricoleur-container pt-24 pb-16">
+        <h1 className="text-3xl font-bold mb-8 text-bricoleur-primary">Conditions Générales d'Utilisation</h1>
+        <div className="prose prose-lg max-w-none">
           <p className="text-gray-600 mb-6">Dernière mise à jour : 4/21/2025</p>
 
           <section className="mb-8">
@@ -117,9 +116,8 @@ const TermsOfService = () => {
             </ul>
           </section>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </Layout>
   );
 };
 

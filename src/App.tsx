@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
+import TechnicianListings from "./pages/TechnicianListings";
+import TechnicianDetails from "./pages/TechnicianDetails";
 import 'leaflet/dist/leaflet.css';
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/technicians" element={<TechnicianListings />} />
+            <Route path="/technicians/:id" element={<TechnicianDetails />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="*" element={<NotFound />} />

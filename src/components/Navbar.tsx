@@ -95,6 +95,9 @@ const Navbar = () => {
             >
               {t("nav.faq")}
             </button>
+            <Link to="/technicians" className="text-gray-800 hover:text-bricoleur-primary font-medium">
+              Technicians
+            </Link>
             <a href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk" download={"lebricolleur.apk"}>
               <Button className="bg-bricoleur-primary hover:bg-bricoleur-primary/90 text-white rounded-full">
                 {t("nav.downloadApp")}
@@ -143,6 +146,12 @@ const Navbar = () => {
               >
                 {t("nav.faq")}
               </button>
+              <Link 
+                to="/technicians"
+                className="text-gray-800 hover:text-bricoleur-primary font-medium py-2"
+              >
+                Technicians
+              </Link>
               <a
                 href="https://saassimplex.blob.core.windows.net/disk/lebricoleur.apk"
                 download="lebricoleur.apk"
