@@ -102,14 +102,14 @@ const TechnicianFilterSidebar = ({
           <div>
             <h4 className="font-medium mb-2">Spécialité</h4>
             <Select 
-              value={filters.specialty || ""} 
-              onValueChange={(value) => handleFilterChange('specialty', value || undefined)}
+              value={filters.specialty || "all_specialties"} 
+              onValueChange={(value) => handleFilterChange('specialty', value === "all_specialties" ? undefined : value)}
             >
               <SelectTrigger>
                 <SelectValue placeholder="Toutes les spécialités" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Toutes les spécialités</SelectItem>
+                <SelectItem value="all_specialties">Toutes les spécialités</SelectItem>
                 {specialties.map(specialty => (
                   <SelectItem key={specialty} value={specialty}>
                     {specialty}
@@ -122,14 +122,14 @@ const TechnicianFilterSidebar = ({
           <div>
             <h4 className="font-medium mb-2">Quartier</h4>
             <Select 
-              value={filters.location || ""} 
-              onValueChange={(value) => handleFilterChange('location', value || undefined)}
+              value={filters.location || "all_locations"} 
+              onValueChange={(value) => handleFilterChange('location', value === "all_locations" ? undefined : value)}
             >
               <SelectTrigger>
                 <SelectValue placeholder="Tous les quartiers" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Tous les quartiers</SelectItem>
+                <SelectItem value="all_locations">Tous les quartiers</SelectItem>
                 {locations.map(location => (
                   <SelectItem key={location} value={location}>
                     {location}
