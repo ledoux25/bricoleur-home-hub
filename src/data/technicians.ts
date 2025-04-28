@@ -1,4 +1,3 @@
-
 import { Technician } from "../types/technician";
 
 // Mock data for 20 technicians
@@ -304,7 +303,6 @@ const technicians: Technician[] = [
       lng: 9.7562
     }
   },
-  // More technicians up to 20
   {
     id: "13",
     name: "Daniel Manga",
